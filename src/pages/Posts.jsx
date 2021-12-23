@@ -5,12 +5,13 @@ import PostForm from '../components/PostForm';
 import PostList from '../components/PostList';
 import MyButton from '../components/UI/button/MyButton';
 import CreatePost from '../components/UI/myModelsWindows/CreatePost';
-import '../styles/App.css';
 import PostService from '../API/PostService';
 import Loader from '../components/UI/loader/Loader';
 import { useFetching } from '../hooks/useFetching';
 import {getPageCount} from '../utils/GetPageCount';
 import useUbserver from '../hooks/useObserver';
+import classes from './Posts.module.css';
+import '../styles/App.css';
 
 function Posts() {
   
@@ -54,15 +55,17 @@ function Posts() {
   }
   
   return (
-    <div className='Posts'>
-      <MyButton style={{marginBottom: '15px', marginTop: '30px', float:'left'}} onClick = {fetchPosts}>Получение постов</MyButton>
-      <MyButton style={{marginBottom: '15px', marginTop: '30px', float:'right'}} onClick = {() => setModal(true)}>
+    <div className={classes.Posts}>
+      <MyButton style={{marginBottom: '15px', marginTop: "30px", float:'left'}} onClick = {fetchPosts}>
+        Получение постов 
+      </MyButton>
+      <MyButton style={{marginBottom: '15px', marginTop: '30px', float: 'right'}} onClick = {() => setModal(true)}>
         Создать пост
       </MyButton>
       <CreatePost visible={modal} setVisible={setModal}>
         <PostForm create = {createPost}/>
       </CreatePost>
-      <hr style={{margin:'20px 0px', width: '800px'}}/>  
+      <hr className={classes.hr}/>  
       <PostFilter
         filter = {filter}
         setFilter = {setFilter}
@@ -73,7 +76,7 @@ function Posts() {
       <PostList remove = {removePost} posts = {sortedAndSearchedPosts} title = "List posts"/>
       <div ref={lastElement}/>
       {isLoadingPosts &&
-          <div style={{display: 'flex', justifyContent: 'center', marginTop: 50}}><Loader/></div>
+          <div className={classes.loader}><Loader/></div>
       }
     </div>
   );

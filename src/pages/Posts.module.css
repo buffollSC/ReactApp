@@ -1,0 +1,14 @@
+.Posts {
+    width: 800px;
+}
+
+.hr {
+    margin: 20px 0px;
+    width: 800px;
+}
+
+.loader {
+    display: flex; 
+    justify-content: center;
+    margin-top: 50;
+}

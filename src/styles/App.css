@@ -10,9 +10,6 @@
     flex-direction: column;
     align-items: center;
 }
-.Posts {
-    width: 800px;
-}
 
 .post {
     display: flex;

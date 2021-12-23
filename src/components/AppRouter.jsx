@@ -1,11 +1,11 @@
-import React, { useContext, useEffect } from "react";
+import React, {useContext} from "react";
 import {Route, Switch, Redirect} from "react-router-dom";
-import { AuthContext } from "../context";
+import {AuthContext} from "../context";
 import Loader from "./UI/loader/Loader";
-import {publicRouters, privateRouters } from "./UI/router";
+import {publicRouters, privateRouters} from "./UI/router";
 
 const AppRouter = () => {
-  const {isAuth, setIsAuth, isPageRefresh} = useContext(AuthContext);
+  const {isAuth, isPageRefresh} = useContext(AuthContext);
   
   if(isPageRefresh){
     return <Loader/>
