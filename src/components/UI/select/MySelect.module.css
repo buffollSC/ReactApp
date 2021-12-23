@@ -1,0 +1,17 @@
+.wrapper_select {
+    text-align: right;
+}
+
+.select {
+    padding: 5px;
+    color: teal;
+    font-size: 14px;
+    background: transparent;
+    border: 1px solid teal;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.select_option {
+    background: slategray;
+    border-radius: 10px;
+}
