@@ -12,13 +12,13 @@ const Navbar = () => {
         localStorage.removeItem('auth')
     }
     return (
-        <div className={classes.navbar}> 
+        <div className = {classes.navbar}> 
             <h2>ItRomjekeProjects</h2>
             <div className={classes.navbar_links}>
-                <Link to='/about'> О сайте </Link>
-                <Link to='/posts'> Посты </Link>
+                <Link to = '/about'> О сайте </Link>
+                <Link to = '/posts'> Посты </Link>
             </div>
-            <div className={classes.navbar_butn}>
+            <div className = {classes.navbar_butn}>
                 <MyButton onClick = {logout}>Выйти</MyButton>
             </div>
         </div>

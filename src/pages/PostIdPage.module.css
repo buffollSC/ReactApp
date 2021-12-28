@@ -4,12 +4,10 @@
     border: 2px solid silver; 
     border-radius: 10px;
 }
-
 .wraper_h {
     text-align: center;
     margin-bottom: 30px;
 }
-
 .wraper.hr {
     margin-top:15px;
     margin-bottom: 15px;

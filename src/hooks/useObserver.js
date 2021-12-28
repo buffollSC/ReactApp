@@ -1,4 +1,4 @@
-//hook для появления бесконечной ленты
+//hook for the appearance of an endless tape
 import { useEffect, useRef } from "react";
 
 const useUbserver = (ref, isLoadingPosts, lastPage, setPage) => {
@@ -10,7 +10,7 @@ const useUbserver = (ref, isLoadingPosts, lastPage, setPage) => {
         if(observer.current) {
             observer.current.disconnect();
         } 
-        var callback = function(entries, observer) {
+        const callback = function(entries, observer) {
             if(entries[0].isIntersecting && lastPage) {
                 setPage();
             }

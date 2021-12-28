@@ -1,7 +1,7 @@
-import {useContext} from "react";
+import { useContext } from "react";
 import MyButton from "../components/UI/button/MyButton";
 import MyInput from "../components/UI/input/MyInput";
-import {AuthContext} from "../context";
+import { AuthContext } from "../context";
 import classes from './Login.module.css';
 
 const Login = () => {

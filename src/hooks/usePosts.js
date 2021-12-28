@@ -1,6 +1,6 @@
-import {useMemo} from "react";
+import { useMemo } from "react";
 
-//Сортировка постов
+//Sort posts
 export const useSortedPosts = (posts, sort) => {
     const sortedPosts = useMemo(() => {
         console.log("Method work");
@@ -8,16 +8,15 @@ export const useSortedPosts = (posts, sort) => {
           return [...posts].sort((a,b) => a[sort].localeCompare(b[sort]))
         }
         return posts;
-      },[sort, posts])
+    },[sort, posts])
 
-      return sortedPosts;
+    return sortedPosts;
 }
-  //Сортировка и поиск постов
+//Sort and search posts
 export const usePosts = (posts, sort, query) => {
     const sortedPosts = useSortedPosts(posts, sort);
     const sortedAndSearchedPosts = useMemo(() => {
         return sortedPosts.filter(post => post.title.toLowerCase().includes(query.toLowerCase()))
-      }, [query,sortedPosts])
-
-      return sortedAndSearchedPosts;
+    }, [query,sortedPosts])
+    return sortedAndSearchedPosts;
 }
