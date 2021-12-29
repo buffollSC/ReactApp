@@ -2,9 +2,9 @@ import React from 'react';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import PostItem from './PostItem';
 
-const PostList = ({posts, title, remove}) => {
+const PostList = ( {posts, title, remove} ) => {
     
-    if(!posts.length) {
+    if (!posts.length) {
         return(
             <h1 style = {{textAlign: 'center'}}>
                 Постов нет!

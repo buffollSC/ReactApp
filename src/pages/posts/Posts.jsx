@@ -1,17 +1,16 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { usePosts } from '../hooks/usePosts';
-import PostFilter from '../components/PostFilter';
-import PostForm from '../components/PostForm';
-import PostList from '../components/PostList';
-import MyButton from '../components/UI/button/MyButton';
-import CreatePost from '../components/UI/myModelsWindows/CreatePost';
-import PostService from '../API/PostService';
-import Loader from '../components/UI/loader/Loader';
-import { useFetching } from '../hooks/useFetching';
-import { getPageCount } from '../utils/GetPageCount';
-import useUbserver from '../hooks/useObserver';
+import { usePosts } from '../../hooks/usePosts';
+import PostFilter from '../../components/PostFilter';
+import PostForm from '../../components/PostForm';
+import PostList from '../../components/PostList';
+import MyButton from '../../components/UI/button/MyButton';
+import CreatePost from '../../components/UI/myModelsWindows/CreatePost';
+import PostService from '../../API/PostService';
+import Loader from '../../components/UI/loader/Loader';
+import { useFetching } from '../../hooks/useFetching';
+import { getPageCount } from '../../utils/GetPageCount';
+import useObserver from '../../hooks/useObserver';
 import classes from './Posts.module.css';
-import '../styles/App.css';
 
 function Posts() {
     const [posts, setPosts] = useState([]);
@@ -31,7 +30,7 @@ function Posts() {
     })
     const lastElement = useRef();
     
-    useUbserver (
+    useObserver (
         lastElement, 
         isLoadingPosts, 
         page < totalPages, 

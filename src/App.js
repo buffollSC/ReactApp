@@ -10,11 +10,11 @@ function App() {
     const [isPageRefresh, setIsPageRefresh] = useState(true)
 
     useEffect(() => {
-        if(localStorage.getItem('auth')) {
+        if (localStorage.getItem('auth')) {
             setIsAuth(true)
         }
         setIsPageRefresh(false)
-    },[])
+    }, [])
 
     return (
         <AuthContext.Provider value = {{

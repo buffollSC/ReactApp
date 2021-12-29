@@ -7,7 +7,7 @@ import { publicRouters, privateRouters } from "./UI/router";
 const AppRouter = () => {
     const {isAuth, isPageRefresh} = useContext(AuthContext);
     
-    if(isPageRefresh){
+    if (isPageRefresh) {
         return <Loader/>
     }
     return (
